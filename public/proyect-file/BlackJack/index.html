@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Juego de Cartas</title>
+    <link rel="stylesheet" href="estilo.css" />
+  </head>
+  <body>
+    <div class="mesa">
+      <div class="fichas">
+        <h3>Your Coins: <span id="coins"></span></h3>
+      </div>
+      <div class="pila">
+        <div class="relieve"></div>
+        <div class="relieve"></div>
+        <img src="img/back.png" />
+        <img src="img/back.png" id="animacionRepartir" />
+      </div>
+      <div class="dealer">
+        <h2>Dealer: <span id="dealer-sum"></span></h2>        
+        <div class="dealer-cards">
+          <div class="carta-falsa"></div>
+          <div class="carta-falsa"></div>
+        </div>
+      </div>
+      <div id="mensaje"><p></p></div>
+
+      <div class="player">
+        <h2>You: <span id="player-sum"></span></h2>
+        <div class="player-cards">
+          <div class="carta-falsa"></div>
+          <div class="carta-falsa"></div>
+        </div>
+      </div>
+
+      <div class="botones">
+        <div>
+          <input type="button" value="HIT" id="otra" disabled />
+          <input type="button" value="CHECK" id="parar" disabled />
+        </div>
+        <div>
+          <input
+            type="text"
+            id="bet"
+            pattern="[0-9]+"
+            placeholder="Bet"
+            autocomplete="off"
+          />
+          <input type="button" value="DEAL" id="iniciar" />
+        </div>
+      </div>
+
+      <p id="resultado"></p>
+    </div>
+
+    <script src="codigo.js"></script>
+  </body>
+</html>

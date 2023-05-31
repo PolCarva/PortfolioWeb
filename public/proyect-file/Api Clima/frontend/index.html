@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clima API</title>
+    <link rel="stylesheet" href="estilo.css" />
+
+    <script
+      src="https://kit.fontawesome.com/51e1fac463.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="loginModal">
+      <div class="modalForm">
+        <i class="fa-solid fa-circle-xmark" id="cerrarLogin"></i>
+        <div class="actionBtns">
+          <button class="actionBtn signupBtn">Registrarse</button>
+          <button class="actionBtn loginBtn">Ingresar</button>
+          <button class="moveBtn">Registrarse</button>
+        </div>
+        <div class="userForm">
+          <form action="" class="form singup singupForm">
+            <div class="inputGroup">
+              <input type="text" placeholder="Nombre" />
+            </div>
+            <div class="inputGroup">
+              <input type="text" placeholder="Apellido" />
+            </div>
+            <div class="inputGroup">
+              <input type="email" placeholder="Email" />
+            </div>
+            <div class="inputGroup">
+              <input type="password" placeholder="Crear una contraseña" />
+            </div>
+            <div class="inputGroup">
+              <input type="password" placeholder="Confirmar contraseña" />
+            </div>
+            <input type="button" class="submitBtn" value="Registrarse" />
+          </form>
+
+          <form action="" class="form login">
+            <div class="inputGroup">
+              <input type="email" placeholder="Email" />
+            </div>
+            <div class="inputGroup">
+              <input type="password" placeholder="Contraseña" />
+            </div>
+            <p class="brandsText">o</p>
+            <ul class="brands">
+              <li>
+                <a href="#"><i class="fa-brands fa-google-plus"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+              </li>
+            </ul>
+            <input type="button" class="submitBtn" value="Ingresar" />
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="weather-app" id="particles-js">
+      <div class="container">
+        <span class="menu-btn">
+          <i class="fa-solid fa-user" id="menuIcon"></i>
+          <div class="holidayBtn">
+            <i class="fa-solid fa-circle-info" id="iconInfo"></i>
+            <div class="info"></div>
+          </div>
+        </span>
+
+        <div>
+          <h1 class="temp">00°</h1>
+          <div class="ciudad-hora">
+            <h1 class="nombre">Ciudad</h1>
+            <small class="small">
+              <span class="horario">Hora</span>
+              -
+              <span class="dia">Dia</span>
+            </small>
+          </div>
+          <div class="clima">
+            <img
+              src="http://openweathermap.org/img/wn/01d@2x.png"
+              alt="icon"
+              class="icon"
+              width="50"
+              height="50"
+            />
+            <span class="condicion">Condición</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <form id="locationInput">
+          <div class="inputSearch">
+            <input
+              autocomplete="off"
+              id="searchInput"
+              type="text"
+              class="search"
+              placeholder="Buscar Ciudad..."
+              autocomplete="on"
+            />
+            <span class="spanError"></span>
+          </div>
+          <button type="submit" class="lupa">
+            <i class="fas fa-search"></i>
+          </button>
+        </form>
+        
+        <ul class="detalles">
+          <h4>Detalles del Clima</h4>
+          <li>
+            <span>Sensación Térmica</span>
+            <span class="sensacion">80%</span>
+          </li>
+          <li>
+            <span>Humedad</span>
+            <span class="humedad">60%</span>
+          </li>
+          <li>
+            <span>Viento</span>
+            <span class="viento">8 km/h</span>
+          </li>
+        </ul>
+        <ul class="ciudades">
+          <h4>Tus Ciudades Favoritas</h4>
+          <span style="color: #ff2c4c;">Esta opcion no está disponible</span>
+
+        </ul>
+      </div>
+    </div>
+
+    <script src="js/particles.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/codigo.js"></script>
+  </body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zara Login</title>
+    <link rel="stylesheet" href="estilo.css" />
+    <script
+      src="https://kit.fontawesome.com/51e1fac463.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="contenedor-modal">
+      <div class="cupon-card">
+        <i class="fa-solid fa-x" id="exitCupon"></i>
+        <img src="img/zara-logo-2.png" alt="Zara Logo" class="cupon-logo">
+        <h1><span>30% OFF</span> EN TU SIGUIENTE COMPRA</h1>
+        <div class="contenedor-cupon">
+          <span id="cuponCode">ZARA2022</span> <span id="cuponBtn">COPIAR CÓDIGO</span>
+        </div>
+        <p>CUPÓN <span>ÚNICO</span> VÁLIDO POR LOS SIGUIENTES <span>20 MINUTOS</span></p>
+      </div>
+    </div>
+    <div class="flechasMover">
+      <a href="#section-1" id="arribaFlecha"
+        ><i class="fa-solid fa-angle-up"></i></a
+      ><a href="#section-2" id="abajoFlecha"
+        ><i class="fa-solid fa-angle-down"></i
+      ></a>
+    </div>
+    <header id="header-hover">
+      <nav>
+        <a href="#"
+          ><img
+            src="img/zara-logo-2.png"
+            alt="Logo Zara"
+            id="logo"
+            width="200px"
+        /></a>
+        <ul class="navbar">
+          <li id="activo"><a href="">Home</a></li>
+          <li><a href="catalogo.html">Catálogo</a></li>
+          <li></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="home-section-1" id="section-1">
+        <div class="titulosOff">
+          <h1>50% OFF</h1>
+          <h2>HASTA FIN DE MES</h2>
+          <h3 id="oferta">LA OFERTA TERMINA EN</h3>
+        </div>
+      </section>
+      <section class="grid-register" id="section-2">
+        <div class="contenedor-grid-register">
+          <div class="titulo-register">
+            <h2>DATOS PERSONALES</h2>
+          </div>
+          <fieldset class="form-register">
+            <div>
+              <input type="text" id="email" placeholder="EMAIL" />
+              <span class="error-input" id="errorMail"></span>
+            </div>
+
+            <div></div>
+            <div>
+              <input type="password" id="pass" placeholder="CONTRASEÑA" />
+              <span class="error-input" id="errorPass"></span>
+            </div>
+            <div>
+              <input
+                type="password"
+                id="pass-confirm"
+                placeholder="CONFIRMAR CONTRASEÑA"
+              />
+              <span class="error-input" id="errorPassConf"></span>
+            </div>
+            <div>
+              <input type="text" id="nombre" placeholder="NOMBRE" />
+              <span class="error-input" id="errorNombre"></span>
+            </div>
+            <div>
+              <input type="text" id="apellido" placeholder="APELLIDO" />
+              <span class="error-input" id="errorApellido"></span>
+            </div>
+            <div>
+              <button href="#" class="btnAnadir" id="registrarmeBtn">
+                REGISTRARME
+              </button>
+            </div>
+          </fieldset>
+        </div>
+        <div></div>
+        <div class="contenedor-slider">
+          <div class="slider-span">
+            <span>ZARA MAN: LO NUEVO DE ZARA HOMBRES</span>
+          </div>
+          <div class="slider-dots"></div>
+          <ul class="slider-register"></ul>
+        </div>
+      </section>
+    </main>
+    <script src="js/datos.js"></script>
+    <script src="js/codigoRegister.js"></script>
+  </body>
+</html>

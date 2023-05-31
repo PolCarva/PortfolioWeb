@@ -1,0 +1,555 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --color-bg: #111;
+    --color-bg70: #111111ad;
+    --color-white: #fff;
+    --color-black: #000;
+    --color-gray: #ccc;
+    --color-gray40: #cccccc20;
+    --color-error: #ff2c4c;
+
+    --color-main: #fa6d1b;
+    --color-hover: #ab480e;
+
+}
+
+body {
+    margin: 0;
+    background-color: var(--color-bg);
+    font-family: 'DM Sans', sans-serif;
+}
+
+h1, h3 {
+    font-weight: 400;
+}
+
+
+/*APP*/
+.weather-app {
+    min-height: 100vh;
+    background-image: url(img/1d.jpg);
+    background-position: center;
+    background-size: cover;
+    color: var(--color-white);
+    position: relative;
+    transition: .5s;
+    opacity: 1;
+}
+
+.weather-app::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 0;
+}
+
+.menu-btn {
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 3;
+    display: flex;
+    width: 56%;
+    justify-content: space-between;
+}
+
+.menu-btn #menuIcon:hover, .menu-btn #iconInfo:hover {
+    color: var(--color-main);
+    transition: all 0.3s ease;
+}
+
+.info {
+    font-size: .6em;
+    position: absolute;
+    max-width: 40%;
+    top: 15%;
+    right: 46%;
+    background: var(--color-main);
+    padding: 1em 2em;
+    border-radius: 4px 0px 4px 4px;
+    z-index: 3;
+    box-shadow: 1px 1px 20px var(--color-bg);
+    transition: all .3s ease;
+    display: none;
+    cursor: default;
+}
+
+.info::before {
+    content: "";
+    position: absolute;
+    top: -.9em;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 1em solid var(--color-main);
+    border-left: 1em solid transparent;
+    border-radius: 100% 0 0 0;
+
+}
+
+.container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 2em 3em 4em 3em;
+}
+
+.container>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ciudad-hora, .temp, .nombre {
+    margin: 0 1em;
+}
+
+.nombre {
+    max-width: 380px;
+}
+
+.ciudad-hora h1 {
+    margin: 0 0 0.2em 0;
+    font-size: 3em;
+}
+
+.temp {
+    font-size: 7em;
+    margin: 0;
+}
+
+.clima {
+    max-width: 120px;
+}
+
+.clima img {
+    display: block;
+    margin: 0.5em 0;
+}
+
+.panel {
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background: rgba(110, 110, 110, 0.25);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    z-index: 1;
+    padding: 3em 2em;
+    overflow-y: scroll;
+}
+
+.panel form {
+    margin-bottom: 3em;
+}
+
+.lupa {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1.5em;
+    margin: 0;
+    border: none;
+    outline: none;
+    background: var(--color-main);
+    color: var(--color-white);
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: 0.4s;
+}
+
+.lupa:hover {
+    background: var(--color-white) !important;
+    color: var(--color-black);
+
+}
+
+.search {
+    position: relative;
+    background: none;
+    border: none;
+    border-bottom: 1px solid var(--color-gray);
+    padding: 0 1em 0.5em 0;
+    width: 80%;
+    color: var(--color-white);
+    font-size: 1.1em;
+}
+
+.search:focus {
+    outline: none;
+}
+
+.search::placeholder {
+    color: var(--color-gray);
+}
+
+.inputSearch {
+    position: relative;
+}
+
+.inputSearch span {
+    position: absolute;
+    bottom: -2em;
+    left: 0;
+    color: var(--color-error);
+    opacity: 0;
+    transition: all .3s ease;
+}
+
+.panel ul {
+    padding: 0 0 1em 0;
+    margin: 2em 0;
+    border-bottom: 1px solid var(--color-gray);
+}
+
+.panel ul li {
+    color: var(--color-gray);
+    margin: 2.5em 0;
+}
+
+.panel ul h4 {
+    margin: 3em 0;
+}
+
+.ciudadDesplegada {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+
+.ciudadDesplegada i:hover {
+    font-size: 1.5em;
+}
+
+
+.ciudadDesplegada div {
+    display: flex;
+    width: 2em;
+    justify-content: center;
+}
+
+.ciudadDesplegada .nombreCiudadFav, .ciudadDesplegada i {
+    cursor: pointer;
+    transition: all .3s ease;
+    align-self: center;
+    justify-content: center;
+}
+
+.ciudadDesplegada .nombreCiudadFav:hover {
+    color: var(--color-white);
+}
+
+.detalles li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.condicion {
+    text-transform: capitalize;
+}
+
+.particles-js-canvas-el {
+    position: fixed;
+    top: 0;
+}
+
+
+
+/* -----------------------Login--------------------------*/
+.loginModal {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-bg70);
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalForm {
+    width: 400px;
+    min-width: 360px;
+    height: fit-content;
+    background-color: var(--color-white);
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+.actionBtns {
+    width: 80%;
+    background-color: var(--color-main);
+    margin: 2em;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    border-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+}
+
+.userForm {
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
+
+.actionBtn {
+    padding: 1em;
+    width: 50%;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    border-radius: 50px;
+    color: var(--color-white);
+    font-size: 0.8em;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.moveBtn {
+    position: absolute;
+    width: 50%;
+    height: 90%;
+    margin: 2px;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    background-color: var(--color-white);
+    font-size: 0.8em;
+    font-weight: 600;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    transform: translateX(0);
+    transition: all 0.2s ease-in-out;
+}
+
+.rightBtn {
+    transform: translateX(98%);
+    transition: all 0.2s ease-in-out;
+}
+
+.inputGroup {
+    width: 300px;
+    margin: 0.8em 0;
+    background-color: var(--color-white);
+    border-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    font-weight: 500;
+}
+
+.inputGroup input {
+    width: 100%;
+    padding: 1em 1.5em;
+    background-color: transparent;
+    border: none;
+    border-radius: 50px;
+}
+
+.inputGroup input:focus {
+    outline: none;
+}
+
+.submitBtn {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 1em;
+    margin: 1em 0 2em 0;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    background-color: var(--color-main);
+    color: var(--color-white);
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    cursor: pointer;
+    font-size: 0.8em;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+}
+
+.submitBtn:hover {
+    background-color: var(--color-hover);
+    color: var(--color-white);
+    transition: all 0.3s ease-in-out;
+}
+
+.form {
+    display: none;
+}
+
+.singupForm, .loginForm {
+    display: block;
+}
+
+.brands {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin: 1em auto;
+    padding-left: 0;
+}
+
+.brandsText {
+    position: relative;
+    margin: 1.5em auto 0;
+    text-align: center;
+}
+
+.brandsText::before {
+    content: "";
+    border-radius: 4px;
+    width: 45%;
+    height: 2px;
+    background-color: var(--color-main);
+    position: absolute;
+    left: 55%;
+    transform: translateY(50%);
+    top: 45%;
+}
+
+.brandsText::after {
+    content: "";
+    border-radius: 4px;
+    width: 45%;
+    height: 2px;
+    background-color: var(--color-main);
+    position: absolute;
+    right: 55%;
+    transform: translateY(50%);
+    top: 45%;
+}
+
+.brands a {
+    color: var(--color-main);
+}
+
+.brands li {
+    list-style: none;
+    color: var(--color-main);
+    font-size: 1.8em;
+}
+
+#cerrarLogin {
+    margin: 1em 1em 0 0;
+    color: var(--color-main);
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: all .3s ease;
+}
+
+#cerrarLogin:hover {
+    color: var(--color-hover);
+}
+
+
+/*Responsive*/
+@media screen and (max-width: 900px) {
+    .weather-app {
+        width: 100vw;
+    }
+
+    .panel, .container {
+        position: relative;
+        width: 100%;
+        bottom: 0;
+    }
+
+    .menu-btn {
+        width: 100%;
+    }
+
+    .info {
+        font-size: .8em;
+        right: 7%;
+        top: 30%;
+        max-width: 70%;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    html {
+        font-size: 12px;
+    }
+
+    .info {
+        right: 10%;
+        top: 30%;
+    }
+
+    .loginModal {
+        background-image: none;
+        background-color: var(--color-white);
+        font-size: 16px;
+    }
+
+    .modalForm {
+        box-shadow: none;
+    }
+
+}
+
+@media screen and (max-width: 425px) {
+    html {
+        font-size: 10px;
+    }
+
+    .info {
+        right: 9%;
+        top: 30%;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    html {
+        font-size: 8px;
+    }
+
+    .info {
+        top: 35%;
+    }
+
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+    scrollbar-width: auto;
+    scrollbar-color: var(--color-gray);
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 5px;
+}
+
+*::-webkit-scrollbar-track {
+    background: var(--color-gray40);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--color-gray);
+    border-radius: 200px;
+    border: transparent;
+}

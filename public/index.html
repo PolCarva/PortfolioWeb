@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-analytics.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyCj4ztpEFTwCyJ9LfQYS_8msZjkj4ynDBI",
+        authDomain: "pablo-carvalho.firebaseapp.com",
+        projectId: "pablo-carvalho",
+        storageBucket: "pablo-carvalho.appspot.com",
+        messagingSenderId: "699112731359",
+        appId: "1:699112731359:web:2844e796335a0dca58af6a",
+        measurementId: "G-1E3E86GDBJ",
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+    </script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Pablo Carvalho</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="img/favicon.ico" />
+    <script type="text/javascript">
+      if (window.innerWidth <= 768) {
+        window.location.href = "responsive.html";
+      }
+    </script>
+    <script
+      src="https://kit.fontawesome.com/51e1fac463.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Loading -->
+    <div class="loading">
+      <div class="loading-bar"></div>
+      <div class="loading-percentage"></div>
+    </div>
+    <!-- /Loading -->
+
+    <div id="scroll-down"><span>Scroll Down</span></div>
+
+    <header id="header">
+      <a href="#" id="logo"
+        ><span class="logo-text magic-hover">Pablo Carvalho</span></a
+      >
+      <button id="menu-button" class="magic-hover">
+        <span class="line"></span>
+        <span class="line"></span>
+      </button>
+      <ul id="menu">
+        <li class="menu-item macnetic magic-hover">
+          <a href="#about-scroll">Sobre Mi</a>
+        </li>
+        <li class="menu-item macnetic magic-hover">
+          <a href="#proyects-scroll">Proyectos</a>
+        </li>
+        <li class="menu-item macnetic magic-hover">
+          <a href="#contact-scroll">Contacto</a>
+        </li>
+      </ul>
+    </header>
+    <main>
+      <div id="menuDisplay">
+        <ul id="menuDisplayUl">
+          <li class="menuDisplay-item magic-hover">
+            <a href="#home">inicio</a>
+          </li>
+          <li class="menuDisplay-item magic-hover">
+            <a href="#about-scroll">sobre mi</a>
+          </li>
+          <li class="menuDisplay-item magic-hover">
+            <a href="#proyects-scroll">proyectos</a>
+          </li>
+          <li class="menuDisplay-item magic-hover">
+            <a href="#contact-scroll">contacto</a>
+          </li>
+        </ul>
+      </div>
+
+      <section id="home">
+        <div class="wrapper-titles">
+          <div class="container">
+            <div class="titles">
+              <div class="t1">
+                <h1 class="titles-title titles-first">creando</h1>
+              </div>
+              <div class="m-scroll">
+                <div class="m-scroll-title">
+                  <div>
+                    <h1 class="titles-second">
+                      <span class="titles-second-span">identidades</span>
+                      <span class="m-scroll-title-span">experiencias</span>
+                      historias
+                      <span class="m-scroll-title-span">identidades</span>
+                      experiencias
+                      <span class="m-scroll-title-span">historias</span>
+                    </h1>
+                    <h1 class="titles-second-clone">
+                      identidades
+                      <span class="m-scroll-title-span">experiencias</span>
+                      historias
+                      <span class="m-scroll-title-span">identidades</span>
+                      experiencias
+                      <span class="m-scroll-title-span">historias</span>
+                    </h1>
+                  </div>
+                </div>
+              </div>
+              <div class="t3">
+                <h1 class="titles-title titles-third">únicas</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="about">
+        <div class="container">
+          <svg width="100%" height="160px" viewBox="0 0 1098.72 89.55">
+            <path
+              id="curve"
+              fill="transparent"
+              d="M0.17,0.23c0,0,105.85,77.7,276.46,73.2s243.8-61.37,408.77-54.05c172.09,7.64,213.4,92.34,413.28,64.19"
+            ></path>
+            <text
+              fill="black"
+              font-size="40"
+              width="100%"
+              style="transform: translate3d(0, 0, 0)"
+            >
+              <textPath
+                style="transform: translate3d(0, 0, 0)"
+                alignment-baseline="top"
+                xlink:href="#curve"
+                startOffset="-200%"
+                id="text-path-1"
+              >
+                <a class="bold">Pablo Carvalho</a>
+                Diseño y Desarrollo Web
+              </textPath>
+            </text>
+          </svg>
+          <div class="wrapper-about">
+            <div class="pics">
+              <div class="pic-back pic"></div>
+              <div class="pic-front pic"></div>
+              <div class="square-about"></div>
+            </div>
+            <div class="wrapper-horizontal-scroll" id="about-scroll">
+              <div class="horizontal-scroll-static">
+                <svg
+                  viewBox="0 0 900 10"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9.89998 6C9.43671 8.28224 7.41896 10 5 10C2.23858 10 0 7.76142 0 5C0 2.23858 2.23858 0 5 0C7.41896 0 9.43671 1.71776 9.89998 4H445.1C445.563 1.71776 447.581 0 450 0C452.419 0 454.437 1.71776 454.9 4H890.1C890.563 1.71776 892.581 0 895 0C897.761 0 900 2.23858 900 5C900 7.76142 897.761 10 895 10C892.581 10 890.563 8.28224 890.1 6H454.9C454.437 8.28224 452.419 10 450 10C447.581 10 445.563 8.28224 445.1 6H9.89998Z"
+                    fill="#D9D9D9"
+                  />
+                  <mask
+                    id="mask0_0_1"
+                    style="mask-type: alpha"
+                    maskUnits="userSpaceOnUse"
+                    x="0"
+                    y="0"
+                    width="900"
+                    height="10"
+                  >
+                    <path
+                      d="M9.89998 6C9.43671 8.28224 7.41896 10 5 10C2.23858 10 0 7.76142 0 5C0 2.23858 2.23858 0 5 0C7.41896 0 9.43671 1.71776 9.89998 4H445.1C445.563 1.71776 447.581 0 450 0C452.419 0 454.437 1.71776 454.9 4H890.1C890.563 1.71776 892.581 0 895 0C897.761 0 900 2.23858 900 5C900 7.76142 897.761 10 895 10C892.581 10 890.563 8.28224 890.1 6H454.9C454.437 8.28224 452.419 10 450 10C447.581 10 445.563 8.28224 445.1 6H9.89998Z"
+                      fill="#D9D9D9"
+                    />
+                  </mask>
+                  <g mask="url(#mask0_0_1)">
+                    <rect class="mask" y="-49" height="99" fill="black" />
+                  </g>
+                </svg>
+                <div class="about-title">
+                  <span class="title-sub">SOBRE MI</span>
+                </div>
+              </div>
+
+              <div class="horizontal-scroll-dinamic">
+                <div class="sobre-mi-1 container-sobre-mi">
+                  <h2>Hola, Soy <span class="bold">Pablo.</span></h2>
+                  <span class="parentheses"
+                    >(A.K.A <span class="bold cyan">Pol</span>)</span
+                  >
+                  <p class="intro">
+                    Actualmente estoy cursando mi tercer año de Diseño
+                    Multimedia en la Universidad ORT del
+                    <span class="bold">Uruguay</span>. En esta carrera descubrí
+                    mi pasión por la programación y desde entonces, siempre
+                    estoy buscando aprender y mejorar.
+                  </p>
+                </div>
+                <div class="sobre-mi-2 container-sobre-mi">
+                  <h2 class="anim1">
+                    Mis <span class="bold">Habilidades.</span>
+                  </h2>
+                  <span class="parentheses anim1"
+                    >(Para <span class="bold cyan">Front-End</span>)</span
+                  >
+                  <div class="habilities">
+                    <div class="habilitie anim1">
+                      <img src="img/Habilities/html.png" alt="HTML" />
+                      <p class="habilitie-name bold">HTML</p>
+                    </div>
+                    <div class="habilitie anim1">
+                      <img src="img/Habilities/css.png" alt="CSS" />
+                      <p class="habilitie-name bold">CSS</p>
+                    </div>
+                    <div class="habilitie anim1">
+                      <img src="img/Habilities/js.png" alt="JAVASCRIPT" />
+                      <p class="habilitie-name bold">JAVASCRIPT</p>
+                    </div>
+                    <div class="habilitie anim1">
+                      <img src="img/Habilities/figma.png" alt="FIGMA" />
+                      <p class="habilitie-name bold">FIGMA</p>
+                    </div>
+                    <div class="habilitie anim1">
+                      <img src="img/Habilities/ps.png" alt="PHOTOSHOP" />
+                      <p class="habilitie-name bold">PHOTOSHOP</p>
+                    </div>
+                    <div class="habilitie anim1">
+                      <img src="img/Habilities/pr.png" alt="PREMIERE" />
+                      <p class="habilitie-name bold">PREMIERE</p>
+                    </div>
+                    <div class="habilitie anim1">
+                      <img src="img/Habilities/ae.png" alt="AFTER EFFECTS" />
+                      <p class="habilitie-name bold">AFTER EFFECTS</p>
+                    </div>
+                    <div class="habilitie anim1">
+                      <img src="img/Habilities/C4D.png" alt="Cinema 4D" />
+                      <p class="habilitie-name bold">CINEMA 4D</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="sobre-mi-3 container-sobre-mi">
+                  <h2 class="anim2">Mis <span class="bold">Valores</span></h2>
+                  <span class="parentheses anim2"
+                    >(<span class="bold cyan">Tres</span> de ellos)</span
+                  >
+                  <div class="container-values">
+                    <div class="value">
+                      <span class="number-value cyan bold anim2">1.</span>
+                      <p class="value-p anim2">
+                        <span class="bold">Aprendizaje continuo:</span> Estoy
+                        siempre aprendiendo y progresando en el desarrollo de
+                        mis habilidades.
+                      </p>
+                    </div>
+                    <div class="value">
+                      <span class="number-value cyan bold anim2">2.</span>
+                      <p class="value-p anim2">
+                        <span class="bold">Enfoque en los resultados:</span> Me
+                        enfoco en entregar soluciones efectivas a los desafíos.
+                      </p>
+                    </div>
+                    <div class="value">
+                      <span class="number-value cyan bold anim2">3.</span>
+                      <p class="value-p anim2">
+                        <span class="bold">Detallista:</span> Los detalles son
+                        lo que distinguen al producto y aportan valor al
+                        cliente.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="proyects">
+        <svg width="100%" height="160px" viewBox="0 0 1098.72 89.55">
+          <path
+            id="curve2"
+            fill="transparent"
+            d="M0.17,0.23c0,0,105.85,77.7,276.46,73.2s243.8-61.37,408.77-54.05c172.09,7.64,213.4,92.34,413.28,64.19"
+          ></path>
+          <text
+            fill="black"
+            font-size="40"
+            width="100%"
+            style="transform: translate3d(0, 0, 0)"
+          >
+            <textPath
+              style="transform: translate3d(0, 0, 0)"
+              alignment-baseline="top"
+              xlink:href="#curve2"
+              startOffset="15%"
+              id="text-path-2"
+            >
+              <a class="bold">Demos un paseo</a>
+              por mis trabajos más recientes
+            </textPath>
+          </text>
+        </svg>
+        <div class="container">
+          <h1 id="proyects-scroll">Proyectos</h1>
+          <div class="square-proyects-1"></div>
+          <ul id="proyect-filter">
+            <li class="filter-item magic-hover active-filter">Todos</li>
+            <li class="filter-item magic-hover">Websites</li>
+            <li class="filter-item magic-hover">Diseños</li>
+            <li class="filter-item magic-hover">Brandings</li>
+            <li class="filter-item magic-hover">Otros</li>
+          </ul>
+        </div>
+        <div class="square-proyects-2"></div>
+        <div class="square-proyects-3"></div>
+        <div id="proyect-grid"></div>
+      </section>
+      <section id="contact">
+        <div class="container">
+          <svg viewBox="0 0 1440 400" fill="none" style="width: 100%">
+            <path
+              id="textPath"
+              d="M0 .5c155.69 0 155.69 64 311.39 64S467.08.5 622.77.5s155.7 64 311.39 64 155.7-64 311.39-64 155.7 64 311.39 64"
+            />
+            <path
+              id="textPath2"
+              d="M596.27 175.34c160.11 0 160.11 64 320.22 64s160.11-64 320.23-64 160.11 64 320.22 64"
+            />
+            <text
+              fill="black"
+              font-size="20"
+              width="100%"
+              style="transform: translate3d(0, 50px, 0)"
+            >
+              <textPath
+                id="contact-text-on-path-1"
+                class="contact-text-on-path"
+                href="#textPath"
+                startOffset="-100%"
+              >
+                ¿Tienes alguna idea de proyecto?
+              </textPath>
+              <textPath
+                id="contact-text-on-path-2"
+                class="contact-text-on-path bold"
+                href="#textPath2"
+                startOffset="100%"
+              >
+                ¡No dudes en
+                <a class="cyan" style="fill: #2683a0">HABLARME</a>
+                !
+              </textPath>
+            </text>
+          </svg>
+          <div class="contact-weapper">
+            <h1 id="contact-scroll">Contacto</h1>
+            <div class="form-squares">
+              <div class="contact-square-back"></div>
+              <div class="contact-form">
+                <form
+                  action="https://formspree.io/f/xpzedzvr"
+                  method="POST"
+                  id="form"
+                >
+                  <div class="name">
+                    <label for="name">Tu Nombre</label>
+                    <input
+                      id="name"
+                      name="name"
+                      type="text"
+                      placeholder="John Doe"
+                      required
+                    />
+                  </div>
+                  <div class="mail">
+                    <label for="email">Tu Email</label>
+                    <input
+                      id="email"
+                      name="email"
+                      type="email"
+                      placeholder="johndoe@ejemplo.com"
+                      required
+                    />
+                  </div>
+                  <div class="message">
+                    <label for="message">Tu Mensaje</label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      type="text"
+                      placeholder="Hola Pablo! Quiero trabajar contigo!"
+                      rows="4"
+                      cols="50"
+                      maxlength="250"
+                      required
+                    ></textarea>
+
+                    <button type="submit" id="submit" class="magic-hover">
+                      <svg
+                        class="sendPath"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          id="start"
+                          d="M4.4 19.4248C4.06667 19.5581 3.75 19.5288 3.45 19.3368C3.15 19.1455 3 18.8665 3 18.4998V14.7748C3 14.5415 3.06667 14.3331 3.2 14.1498C3.33333 13.9665 3.51667 13.8498 3.75 13.7998L11 11.9998L3.75 10.1998C3.51667 10.1498 3.33333 10.0331 3.2 9.84981C3.06667 9.66648 3 9.45814 3 9.22481V5.49981C3 5.13314 3.15 4.85381 3.45 4.66181C3.75 4.47048 4.06667 4.44148 4.4 4.57481L19.8 11.0748C20.2167 11.2581 20.425 11.5665 20.425 11.9998C20.425 12.4331 20.2167 12.7415 19.8 12.9248L4.4 19.4248Z"
+                          fill="#2683A0"
+                        />
+                      </svg>
+                    </button>
+                    <span id="char-count">0/250</span>
+                  </div>
+                </form>
+              </div>
+              <div class="contact-square-front"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer id="footer">
+      <ul id="links">
+        <li class="links-item instagram magic-hover">
+          <a href="https://www.instagram.com/pabloooocarvalho/" target="_blank"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+        </li>
+        <li class="links-item linkedin magic-hover">
+          <a
+            href="https://www.linkedin.com/in/pablo-carvalho-gimenez/"
+            target="_blank"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+        </li>
+        <li class="links-item codepen magic-hover">
+          <a href="https://codepen.io/Pol_Carva" target="_blank"
+            ><i class="fa-brands fa-codepen"></i
+          ></a>
+        </li>
+        <li class="links-item gmail magic-hover">
+          <a href="mailto:pablocarvalhogimenez@gmail.com"
+            ><i class="fa-brands fa-google"></i
+          ></a>
+        </li>
+      </ul>
+    </footer>
+
+    <script>
+      window.onload = function () {
+        setTimeout(function () {
+          window.scrollTo(0, 1);
+        }, 0);
+      };
+    </script>
+    <!-- PROYECTS -->
+    <script src="js/proyects.js"></script>
+
+    <!-- GSAP -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+
+    <!-- Tilt -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"
+      integrity="sha512-RX/OFugt/bkgwRQg4B22KYE79dQhwaPp2IZaA/YyU3GMo/qY7GrXkiG6Dvvwnds6/DefCfwPTgCXnaC6nAgVYw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- MACNETIC -->
+    <script src="js/macnetic.js"></script>
+
+    <!-- CURSOR -->
+    <script type="text/javascript" src="js/cursor.js"></script>
+    <!-- Script -->
+    <script src="js/script.js"></script>
+  </body>
+</html>

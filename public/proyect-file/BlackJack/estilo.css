@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: white;
+}
+
+body {
+    background-image: url('https://pl.sterlingcdn.com/wp-content/uploads/sites/3/2018/07/blackjack-classic-background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+}
+
+img {
+    width: 70px;
+}
+
+ .mesa {
+    width: 80%;
+    margin: auto;
+}
+
+.fichas {
+    transform: translateY(10px);
+
+}
+
+.dealer {
+    position: relative;
+    top: -70px;
+    min-height: 70px;
+}
+
+.player {
+    position: relative;
+    top: -50px;
+    min-height: 70px;
+}
+
+.dealer-cards, .player-cards {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* MAZO DECORACIÓN */
+.pila {
+    position: relative;
+    top: 50px;
+    left: 50px;
+    width: 70px;
+    height: 98px;
+    border-radius: 5px;
+    background-color: rgb(86, 86, 86);
+    box-shadow: 2px 2px 4px black;
+
+}
+
+.pila .relieve:nth-child(odd) {
+    width: 70px;
+    height: 98px;
+    background-color: rgb(71, 71, 71);
+    z-index: 5;
+    border-radius: 5px;
+    position: absolute;
+    top: -2px;
+    left: -4px;
+}
+
+.pila .relieve:nth-child(even) {
+    width: 70px;
+    height: 98px;
+    background-color: rgb(62, 62, 62);
+    z-index: 4;
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    left: -1px;
+}
+
+.pila img {
+    position: absolute;
+    top: -3px;
+    left: -5px;
+    z-index: 10;
+}
+
+/* CARTAS Y ANIMACION */
+
+
+.dealer-cards {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+}
+
+
+.carta-box {
+    width: 70px;
+    height: 97.25px;
+    position: relative;
+    perspective: 1000px;
+}
+
+.carta-box:hover .carta {
+    transform: rotateY(180deg);
+}
+
+
+.carta {
+    transform-style: preserve-3d;
+    transition: all 0.5s linear;
+}
+
+.cara {
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.cara.detras {
+    transform: rotateY(180deg);
+}
+
+.carta-falsa {
+    width: 70px;
+    height: 98px;
+    background-color: rgb(5, 28, 0);
+    margin: 5px 2px;
+    border-radius: 2px;
+}
+
+/* INPUTS */
+
+input[type=button] {
+    outline: none;
+    border: 0;
+    background-color: green;
+    color: white;
+    border-radius: 2px;
+    padding: 1em 2em;
+    transition: 0.3s all;
+    cursor: pointer;
+}
+
+#parar {
+    background-color: rgba(255, 0, 0, 0.5);
+}
+
+#parar:hover {
+    background-color: rgba(255, 0, 0, 0.4);
+}
+
+#iniciar {
+    background-color: rgb(39, 39, 255);
+    margin-top: 20px;
+    border: 2px solid rgb(39, 39, 255);
+}
+
+#iniciar:hover {
+    background-color: rgba(39, 39, 255, 0.6);
+
+}
+
+#iniciar:disabled {
+    background-color: rgb(91, 91, 91);
+    color: gray;
+    border: gray;
+}
+
+#otra:hover {
+    background-color: rgba(0, 128, 0, 0.7);
+}
+
+#otra:disabled {
+    background-color: rgb(93, 139, 103);
+}
+
+#parar:disabled {
+    background-color: rgb(139, 93, 93);
+}
+
+#bet {
+    width: 5em;
+    padding: .8em 0;
+    outline: none;
+    border: 2px solid rgb(255, 255, 255);
+    color: black;
+    border-radius: 2px;
+    margin-right: 1em;
+}
+
+input#bet:disabled {
+    color: white !important;
+    width: 5em;
+
+}
+
+input:invalid {
+    border: 2px solid red;
+    animation: shake 300ms;
+    color: red;
+}
+
+@keyframes shake {
+    25% {
+        transform: translateX(4px);
+    }
+
+    50% {
+        transform: translateX(-4px);
+    }
+
+    75% {
+        transform: translateX(4px);
+    }
+}
+
+
+/*MENSAJE */
+
+#mensaje {
+    background-color: rgb(95, 153, 0);
+    width: fit-content;
+    padding: 0 2em;
+    height: 2em;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -165%);
+    border-radius: 4px;
+    cursor: default;
+}
+
+@media only screen and (max-width: 600px)  {
+    .pila {
+        opacity: 0;
+    }
+}

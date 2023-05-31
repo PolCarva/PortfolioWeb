@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="stylesheet" href="estilo.css" />
+    <link rel="icon" href="img/favicon-32x32.png" />
+
+    <script
+      src="https://kit.fontawesome.com/51e1fac463.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="index.html"
+          ><img
+            id="logo"
+            src="img/zara-logo-1.png"
+            alt="Logo Zara"
+            width="200px"
+        /></a>
+        <ul class="navbar">
+          <li id="inactivo" class="activoAB"><a href="index.html">Home</a></li>
+          <li id="inactivo" class="activoAB">
+            <a href="catalogo.html">Catálogo</a>
+          </li>
+          <li><i id="oculto" class="fa-solid fa-magnifying-glass"></i></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="info-prod-grid">
+        <div class="info-gral">
+          <div class="contenedor-info-gral">
+            <h3>MATERIALES, CUIDADOS Y ORIGEN</h3>
+            <h4>JOIN LIFE</h4>
+            <p>
+              Care for fiber: al menos 25% poliéster reciclado. Etiquetamos bajo
+              el nombre Join Life las prendas que se producen utilizando
+              tecnologías y materias primas que nos ayudan a reducir el impacto
+              medioambiental de nuestros productos.
+            </p>
+          </div>
+        </div>
+        <div class="foto-prod">
+          <div class="contenedor-ampliacion">
+            <ul id="ampliacion">
+              <li>
+                <img src="img/saco_1_1.jpg" alt="" />
+              </li>
+              <li>
+                <img src="img/saco_1_1.jpg" alt="" />
+              </li>
+            </ul>
+          </div>
+          <div class="progress-bar-container">
+            <div class="progress-bar"><div id="progreso"></div></div>
+          </div>
+          <div id="miniaturas">
+            <div class="miniaturas-container">
+              <img src="img/saco_1_1.jpg" alt="" />
+              <img src="img/saco_1_2.jpg" alt="" />
+              <img src="img/saco_1_3.jpg" alt="" />
+              <img src="img/saco_1_4.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="info-prod-info">
+          <div class="contenedor-info-prod-info">
+            <h2 id="nombreProd"></h2>
+            <p id="descProd">
+            </p>
+            <div class="colores-prod"></div>
+
+            <p id="nombreColor"></p>
+            <h4 id="precioProd"></h4>
+            <div class="contenedor-agregar-al-carro">
+              <button href="" class="btnAnadir" id="agregarAlCarroBtn">
+                Agregar al carro
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="js/datos.js"></script>
+    <script src="js/infoProd.js"></script>
+  </body>
+</html>

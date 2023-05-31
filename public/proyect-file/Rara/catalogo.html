@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ZARA</title>
+    <link rel="stylesheet" href="estilo.css" />
+    <link rel="icon" href="img/favicon-32x32.png" />
+    <script
+      src="https://kit.fontawesome.com/51e1fac463.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header id="header-hover">
+      <nav>
+        <a href="index.html"
+          ><img
+            src="img/zara-logo-1.png"
+            alt="Logo Zara"
+            width="200px"
+            id="logo"
+        /></a>
+        <div class="contenedor-nabvar">
+          <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li id="activo" class="activoAB"><a href="#">Catálogo</a></li>
+            <li id="searchIcon">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </li>
+          </ul>
+          <section class="contenedor-modificadores">
+            <div class="contenedor-filtro">
+              <span>FILTRAR</span>
+              <select id="filtro" name="filtro">
+                <option value="todo">TODO</option>
+                <option value="abrigos">ABRIGOS</option>
+                <option value="accesorios">ACCESORIOS</option>
+                <option value="chalecos">CHALECOS</option>
+                <option value="pantalones">PANTALONES</option>
+                <option value="punto">PUNTO</option>
+                <option value="sobrecamisas">SOBRECAMISAS</option>
+                <option value="tracksuits">TRACKSUITS</option>
+                <option value="trajes">TRAJES</option>
+              </select>
+            </div>
+            <div class="contenedor-switch">
+              <span>GRILLA</span>
+              <label class="switch">
+                <input type="checkbox" id="switch" />
+                <span class="slider"></span>
+              </label>
+              <span>DETALLE</span>
+            </div>
+            
+          </section>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="catalogo">
+        <ul class="grid-catalogo"></ul>
+      </section>
+    </main>
+    <script src="js/datos.js"></script>
+    <script src="js/catalogo.js"></script>
+  </body>
+</html>

@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-main: #99B898;
+    --color-main-hover: #5f785e;
+    --color-second: #FF847C;
+    --color-emphasis: #E84A5F;
+    --color-dark: #2A363B;
+    --color-bright: #fff;
+    --color-gray: #667176;
+}
+
+
+
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(https://picsum.photos/1920/1080), linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3));
+    background-size: cover;
+    background-blend-mode: multiply;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalForm {
+    width: 400px;
+    min-width: 360px;
+    height: fit-content;
+    background-color: var(--color-bright);
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.actionBtns {
+    width: 80%;
+    background-color: var(--color-main);
+    margin: 2em;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    border-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+}
+
+.actionBtn {
+    padding: 1em;
+    width: 50%;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    border-radius: 50px;
+    color: var(--color-bright);
+    font-size: 0.8em;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.moveBtn {
+    position: absolute;
+    width: 50%;
+    height: 90%;
+    margin: 2px;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    background-color: var(--color-bright);
+    font-size: 0.8em;
+    font-weight: 600;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    transform: translateX(0);
+    transition: all 0.2s ease-in-out;
+}
+
+.rightBtn {
+    transform: translateX(98%);
+    transition: all 0.2s ease-in-out;
+}
+
+.inputGroup {
+    width: 300px;
+    margin: 0.8em 0;
+    background-color: var(--color-bright);
+    border-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    font-weight: 500;
+}
+
+.inputGroup input {
+    width: 100%;
+    padding: 1em 1.5em;
+    background-color: transparent;
+    border: none;
+    border-radius: 50px;
+}
+
+.inputGroup input:focus {
+    outline: none;
+}
+
+.submitBtn {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 1em;
+    margin: 1em 0 2em 0;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    background-color: var(--color-main);
+    color: var(--color-bright);
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    cursor: pointer;
+    font-size: 0.8em;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+}
+
+.submitBtn:hover {
+    background-color: var(--color-main-hover);
+    color: var(--color-bright);
+    transition: all 0.3s ease-in-out;
+}
+
+.form {
+    display: none;
+}
+
+.singupForm, .loginForm {
+    display: block;
+}
+
+.brands {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin: 1em auto 1em;
+}
+
+.brandsText {
+    position: relative;
+    margin: 1.5em auto 0;
+    text-align: center;
+}
+
+.brandsText::before {
+    content: "";
+    border-radius: 4px;
+    width: 45%;
+    height: 2px;
+    background-color: var(--color-main);
+    position: absolute;
+    left: 55%;
+    transform: translateY(50%);
+    top: 45%;
+}
+.brandsText::after {
+    content: "";
+    border-radius: 4px;
+    width: 45%;
+    height: 2px;
+    background-color: var(--color-main);
+    position: absolute;
+    right: 55%;
+    transform: translateY(50%);
+    top: 45%;
+}
+
+.brands a {
+    color: var(--color-second);
+}
+
+.brands li {
+    list-style: none;
+    color: var(--color-main);
+    font-size: 1.8em;
+}
+
+
+/*  PANTALLA CHICA  */
+@media only screen and (max-width: 500px) {
+    .wrapper {
+        background-image: none;
+        background-color: var(--color-bright);
+    }
+
+    .modalForm {
+        box-shadow: none;
+    }
+}
