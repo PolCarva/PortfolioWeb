@@ -305,7 +305,7 @@ function loadProyects(proyectsArray) {
   for (let i = 0; i <= proyectsArray.length-1; i++) {
     console.log(proyectsArray[i]);
     proyectGrid.innerHTML += `
-    <a href="proyect.html?value=${proyectsArray[i].title}" data-tilt data-tilt-reverse="true" class="proyect proyect-${proyectsArray[i].type} magic-hover" >
+    <a href="${proyectsArray[i].url}" target="_blank" data-tilt data-tilt-reverse="true" class="proyect proyect-${proyectsArray[i].type} magic-hover" >
                 <div class="proyect-bg" style="background-color: ${proyectsArray[i].color};">
                   <div class="proyect-mockup" style="background-image: url(img/Mockups/${proyectsArray[i].img}.png);">
                   </div>

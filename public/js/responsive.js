@@ -39,7 +39,7 @@ function loadProyects(proyectsArray) {
   proyectGrid.innerHTML = "";
   for (let i = 0; i <= proyectsArray.length - 1; i++) {
     proyectGrid.innerHTML += `
-      <a href="proyect.html?value=${proyectsArray[i].title}" target="_blank" class="proyect proyect-${proyectsArray[i].type} " >
+      <a href="${proyectsArray[i].url}" target="_blank" class="proyect proyect-${proyectsArray[i].type} " >
                   <div class="proyect-bg" style="background-color: ${proyectsArray[i].color};">
                     <div class="proyect-mockup" style="background-image: url(img/Mockups/${proyectsArray[i].img}.png);">
                     </div>
