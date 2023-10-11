@@ -13,6 +13,8 @@ const flutter = "flutter";
 const react = "react";
 const ionic = "ionic";
 const bootstrap = "bootstrap";
+const tailwind = "tailwind";
+const mongodb = "mongo";
 const firebase = "firebase";
 
 const proyects = [
@@ -41,30 +43,17 @@ const proyects = [
     habilities: [htmlLogo, cssLogo, jsLogo, bootstrap],
   },
   {
-    title: "Sushi App",
-    type: "mobile",
-    categories: "WEBSITE, MOBILE APP, MOCKUPS",
-    year: "2022",
-    color: "#EEFEE1",
-    img: "Sushi",
-    filter: "Diseños",
-    info: "Sushi app es un proyecto diseñado en Figma que consiste en una aplicación móvil para pedir sushi a domicilio. Además, cuenta con su versión web que fue desarrollada en 2022 como parte de un proyecto de Diseño Digital 5. La app y la página web ofrecen una experiencia de usuario intuitiva y sencilla, permitiendo a los usuarios navegar por el menú y realizar pedidos de manera fácil y rápida. Los usuarios pueden ver los precios, la descripción de los platos y agregarlos a su carrito de compras. Además, la app y la web cuentan con opciones para agregar notas y personalizar los pedidos, así como opciones de pago y seguimiento de pedidos en tiempo real. En resumen, Sushi app es una solución práctica y eficiente para los amantes del sushi que desean disfrutar de sus platos favoritos desde la comodidad de su hogar.",
-    url: "https://www.figma.com/proto/fp7v50LPjN4I1qvAzgrx92/Pablo-Carvalho-Obl1---Sushi?page-id=0%3A1&node-id=1%3A18&viewport=287%2C256%2C0.09&scaling=scale-down&starting-point-node-id=1%3A18",
-    habilities: [figmaLogo],
-  },
-  {
-    title: "Showreel 2021",
+    title: "La Creacion",
     type: "web",
     categories: "MOTION GRAPHICS, VIDEO",
-    year: "2021",
-    color: "#E1FFFB",
-    img: "CA1",
-    filter: "Otros",
-    info: "Este proyecto es un showreel sobre los trabajos que hice en la carrera de Diseño Multimedia (2020 - 2021). Muestra mi evolución como diseñador y mi capacidad tanto creativa como práctica a la hora de hacer un proyecto de motion graphics y mostrar mi capacidad como diseñador. ",
-    url: "https://youtu.be/vlBQ4CqPZgw",
-    habilities: [psLogo, aeLogo, prLogo],
+    year: "2023",
+    color: "#3F3F3F",
+    img: "LaCreacion",
+    filter: "Videos",
+    info: "Motion Graphic hecho para Gráfica para cine y TV, 2023",
+    url: "https://youtu.be/Gr5Sq8Vrfiw",
+    habilities: [figmaLogo, aeLogo],
   },
-
   {
     title: "Movie Me!",
     type: "web",
@@ -77,7 +66,6 @@ const proyects = [
     url: "https://movie-me.glitch.me/",
     habilities: [htmlLogo, cssLogo, jsLogo],
   },
-
   {
     title: "Rara",
     type: "web",
@@ -89,6 +77,31 @@ const proyects = [
     info: "RARA es una página web creada en 2022 como proyecto para la asignatura de Programación 1. La página web ofrece una versión personalizada de Zara, con una interfaz de usuario moderna y elegante que permite a los usuarios navegar por los diferentes productos y categorías. La página web fue desarrollada utilizando HTML, CSS y JavaScript, y los usuarios pueden buscar y encontrar fácilmente los productos que desean utilizando un filtro de búsqueda por nombre. Los productos se presentan de manera clara y organizada, con detalles como imágenes, precios y descripciones, lo que permite a los usuarios conocer más sobre los productos que están interesados. En general, RARA fue una gran experiencia para mejorar mis habilidades y aprender sobre el diseño y la implementación de páginas web modernas y atractivas sin necesidad de implementar backend.",
     url: "proyect-file/Rara/index.html",
     habilities: [htmlLogo, cssLogo, jsLogo],
+  },
+
+  {
+    title: "Showreel 2021",
+    type: "web",
+    categories: "MOTION GRAPHICS, VIDEO",
+    year: "2021",
+    color: "#E1FFFB",
+    img: "CA1",
+    filter: "Videos",
+    info: "Este proyecto es un showreel sobre los trabajos que hice en la carrera de Diseño Multimedia (2020 - 2021). Muestra mi evolución como diseñador y mi capacidad tanto creativa como práctica a la hora de hacer un proyecto de motion graphics y mostrar mi capacidad como diseñador. ",
+    url: "https://youtu.be/vlBQ4CqPZgw",
+    habilities: [psLogo, aeLogo, prLogo],
+  },
+  {
+    title: "Sushi App",
+    type: "mobile",
+    categories: "WEBSITE, MOBILE APP, MOCKUPS",
+    year: "2022",
+    color: "#EEFEE1",
+    img: "Sushi",
+    filter: "Diseños",
+    info: "Sushi app es un proyecto diseñado en Figma que consiste en una aplicación móvil para pedir sushi a domicilio. Además, cuenta con su versión web que fue desarrollada en 2022 como parte de un proyecto de Diseño Digital 5. La app y la página web ofrecen una experiencia de usuario intuitiva y sencilla, permitiendo a los usuarios navegar por el menú y realizar pedidos de manera fácil y rápida. Los usuarios pueden ver los precios, la descripción de los platos y agregarlos a su carrito de compras. Además, la app y la web cuentan con opciones para agregar notas y personalizar los pedidos, así como opciones de pago y seguimiento de pedidos en tiempo real. En resumen, Sushi app es una solución práctica y eficiente para los amantes del sushi que desean disfrutar de sus platos favoritos desde la comodidad de su hogar.",
+    url: "https://www.figma.com/proto/fp7v50LPjN4I1qvAzgrx92/Pablo-Carvalho-Obl1---Sushi?page-id=0%3A1&node-id=1%3A18&viewport=287%2C256%2C0.09&scaling=scale-down&starting-point-node-id=1%3A18",
+    habilities: [figmaLogo],
   },
 
   {
@@ -137,7 +150,7 @@ const proyects = [
     year: "2022",
     color: "#535383",
     img: "Catfishing",
-    filter: "Otros",
+    filter: "Videos",
     info: "Catfishing es un corto audiovisual creado en 2022 como parte de la materia Lenguaje Audiovisual. La historia del corto gira en torno a una chica que comienza a hablar con un hombre a través de internet, sin saber que está siendo engañada. A medida que la historia se desarrolla, se utiliza el lenguaje audiovisual para crear una atmósfera misteriosa y tensa, que refleja lo que siente el espectador, que en todo momento sabe más que la protagonista. Se utilizan recursos visuales y de sonido para transmitir la sensación de engaño y para crear una narrativa emotiva y cautivadora. En general, Catfishing es un excelente ejemplo de cómo el lenguaje audiovisual puede utilizarse para contar historias efectivas, emocionantes y sorprendentes, y cómo la combinación adecuada de elementos visuales y sonoros puede transmitir emociones y sentimientos complejos en una corta duración.",
     url: "https://youtu.be/DcCC_iPgrAU",
     habilities: [prLogo, aeLogo],
@@ -156,27 +169,27 @@ const proyects = [
     habilities: [htmlLogo, cssLogo, jsLogo],
   },
 
-  {
+  /* {
     title: "Videos 3D",
     type: "web",
     categories: "VIDEOS, 3D",
     year: "2021",
     color: "#B48B3C",
     img: "3D",
-    filter: "Otros",
+    filter: "Videos",
     info: "Este proyecto consiste en una serie de videos cortos creados con herramientas básicas de Cinema4D. Fue mi primer acercamiento al mundo del 3D y me permitió aprender las habilidades necesarias para crear y animar objetos tridimensionales. Los videos pueden variar en contenido, desde simples animaciones de objetos hasta escenas más elaboradas con partículas y luces. Este proyecto fue creado en 2021 para la materia de Diseño y Animación 3D, y permitió al creador explorar las posibilidades creativas del software y desarrollar habilidades en animación y diseño 3D.",
     url: "https://www.behance.net/gallery/164255459/Diseno-y-Animacion-3D",
     habilities: [c4dLogo],
   },
 
-  {
+   {
     title: "Arte Generativo",
     type: "web",
     categories: "PROCESSING, ARTE",
     year: "2021",
     color: "#121212",
     img: "ArteGenerativo",
-    filter: "Otros",
+    filter: "Videos",
     info: "El proyecto de Arte Generativo consiste en una serie de piezas visuales creadas a través del uso de código en Processing3. La característica principal de estas piezas es su paleta de colores en la gama de los rosados-violetas, lo que les otorga una identidad visual unificada. El objetivo de este proyecto es crear una experiencia visual generativa que evoca la vida y el movimiento a través del arte digital. Algunas de estas piezas son interactivas, lo que permite al espectador interactuar con la obra y, de esta manera, ser parte del proceso de creación.Este proyecto fue creado con el fin de explorar las posibilidades de la programación como medio de creación artística, y fue diseñado para la materia de Taller de Arte Digital 1 en 2021.",
     url: "https://www.behance.net/gallery/128565745/TAD-1-Modulo-1",
     habilities: [processingLogo],
@@ -189,9 +202,9 @@ const proyects = [
     year: "2021",
     color: "#F2F2F2",
     img: "Mapping",
-    filter: "Otros",
+    filter: "Videos",
     info: "El proyecto de videomapping realizado en Resolume Arena consistió en proyectar figuras y animaciones en una estructura en forma de pirámide compuesta por 3 cajas. Se utilizaron diversos videos y algunas animaciones propias, para crear efectos visuales llamativos y atractivos. La presentación del proyecto se realizó en un espacio oscuro para resaltar los efectos de iluminación generados por las proyecciones, lo que creó una experiencia inmersiva y sorprendente para el espectador. El proyecto fue desarrollado como parte del curso de Taller de Arte Digital 1 en el año 2021.",
     url: "https://youtu.be/I2mU4VFsy1U",
     habilities: [resolumeLogo],
-  },
+  }, */
 ];
