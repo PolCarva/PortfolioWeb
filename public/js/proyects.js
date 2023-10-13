@@ -18,7 +18,7 @@ const mongodb = "mongo";
 const firebase = "firebase";
 
 const proyects = [
-  {
+  /* {
     title: "Darío Spain",
     type: "web",
     categories: "WEBSITE, MOBILE APP, PORTFOLIO, PROYECTO REAL",
@@ -27,13 +27,25 @@ const proyects = [
     img: "DarioSpain",
     filter: "Websites",
     info: "Portfolio profesional para el fotógrafo Argentino Darío Spain. El proyecto fue creado en 2023 como parte de un proyecto real planteado por CoderHouse para un cliente. El sitio web fue desarrollado utilizando React, Tailwind, Figma, y cuenta con una interfaz de usuario elegante que permite a los usuarios navegar por las diferentes secciones y ver el trabajo del fotógrafo. En general, el sitio web es una excelente manera de mostrar el trabajo de Darío Spain y una gran oportunidad para aprender sobre el desarrollo de sitios para clientes reales.",
-    url: "https://dariospain.netlify.app/",
+    url: "https://dariospain.netlify.app",
+    habilities: [react, tailwind, figmaLogo],
+  },*/
+  {
+    title: "Trivia Challenge!",
+    type: "web",
+    categories: "REACT, TAILWIND, API, RESPONSIVE",
+    year: "2023",
+    color: "#60A5FA",
+    img: "Trivia",
+    filter: "Websites",
+    info: "Una app de Preguntas y Respuestas, integrando la api de OpenTriviaDB junto a React y Tailwind",
+    url: "https://triviachallenge.vercel.app/",
     habilities: [react, tailwind, figmaLogo],
   },
   {
     title: "Dropper",
     type: "web",
-    categories: "WEBSITE, MOBILE APP, BASE DE DATOS, ECOMMERCE",
+    categories: "BASE DE DATOS, REACT, FIREBASE, BOOTSTRAP, RESPONSIVE",
     year: "2023",
     color: "#0F4A79",
     img: "Dropper",
