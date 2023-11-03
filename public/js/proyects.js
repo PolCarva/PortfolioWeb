@@ -19,6 +19,18 @@ const firebase = "firebase";
 
 const proyects = [
   {
+    title: "Clon de Twitter",
+    type: "web",
+    categories: "WEBSITE, MOBILE APP, FULLSTACK",
+    year: "2023",
+    color: "#4AB3F3",
+    img: "TwitterClone",
+    filter: "Websites",
+    info: "Un clon de twitter con todas las funcionalidades. Creado por Lucas Lorenzo y yo como un trabajo independiente para nuestros portfolios.",
+    url: "https://clone-social-media.netlify.app/",
+    habilities: [react, tailwind],
+  },
+  {
     title: "Darío Spain",
     type: "web",
     categories: "WEBSITE, MOBILE APP, PORTFOLIO, PROYECTO REAL",
@@ -35,7 +47,7 @@ const proyects = [
     type: "web",
     categories: "REACT, TAILWIND, API, RESPONSIVE",
     year: "2023",
-    color: "#60A5FA",
+    color: "#4E20A1",
     img: "Trivia",
     filter: "Websites",
     info: "Una app de Preguntas y Respuestas, integrando la api de OpenTriviaDB junto a React y Tailwind",
