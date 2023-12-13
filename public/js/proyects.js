@@ -19,6 +19,18 @@ const firebase = "firebase";
 
 const proyects = [
   {
+    title: "Hotel & Travel",
+    type: "web",
+    categories: "WEBSITE, MOBILE APP, TAILWIND, REACT, API",
+    year: "2023",
+    color: "#345afa",
+    img: "HotelAndTravel",
+    filter: "Websites",
+    info: "Una web para encontrar restaurantes, hoteles y atracciones en todo el mundo.",
+    url: "https://clone-social-media.netlify.app/",
+    habilities: [react, tailwind],
+  },
+  {
     title: "Clon de Twitter",
     type: "web",
     categories: "WEBSITE, MOBILE APP, FULLSTACK",
