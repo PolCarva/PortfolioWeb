@@ -23,7 +23,7 @@ const proyects = [
     type: "web",
     categories: "WEBSITE, MOBILE APP, TAILWIND, REACT, API",
     year: "2023",
-    color: "#345afa",
+    color: "#0fb888",
     img: "HotelAndTravel",
     filter: "Websites",
     info: "Una web para encontrar restaurantes, hoteles y atracciones en todo el mundo.",
