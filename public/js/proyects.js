@@ -24,7 +24,7 @@ const proyects = [
     categories: "WEBSITE, MOBILE APP, TAILWIND, REACT, API",
     year: "2023",
     color: "#0fb888",
-    img: "HotelAndTravel",
+    img: "Promo 2",
     filter: "Websites",
     info: "Una web para encontrar restaurantes, hoteles y atracciones en todo el mundo.",
     url: "https://clone-social-media.netlify.app/",
