@@ -61,6 +61,13 @@ function loadProyects(proyectsArray) {
   });
 }
 
+//Update
+const closeDialog = document.querySelector("#closeUpdate");
+
+closeDialog.addEventListener("click", () => {
+  document.querySelector(".update").style.display = "none";
+});
+
 //Menu
 function openCloseMenuDisplay() {
   if (menuButton.className == "close") {

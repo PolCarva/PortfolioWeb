@@ -16,7 +16,6 @@ magicMouse(options);
 //Load
 const scrollDown = document.querySelector("#scroll-down");
 
-
 //Menu Btn
 const menuButton = document.getElementById("menu-button");
 const menuDisplay = document.querySelector("#menuDisplay");
@@ -171,8 +170,8 @@ menuButton.addEventListener("click", function () {
 logo.addEventListener("click", () => {
   gsap.to("body", {
     overflowY: "visible",
-  })
-})
+  });
+});
 
 menuDisplayItems.forEach((e) => {
   e.addEventListener("click", (f) => {
@@ -203,6 +202,12 @@ contactSec.addEventListener("mouseleave", () => {
   });
 });
 //----------------FUNCTIONS----------------//
+//Update
+const closeDialog = document.querySelector("#closeUpdate");
+
+closeDialog.addEventListener("click", () => {
+  document.querySelector(".update").style.display = "none";
+});
 
 //Loading
 function splitH1IntoSpans(h1) {
@@ -224,7 +229,6 @@ function splitH1IntoSpans(h1) {
   return spans;
 }
 
-
 //Menu
 
 function openCloseMenuDisplay() {
@@ -238,8 +242,7 @@ function openCloseMenuDisplay() {
     });
     gsap.to("#menuDisplay", {
       boxShadow: "-50vw 0 10px 20px rgba(0, 0, 0, 0.5)",
-    })
-
+    });
   } else {
     gsap.to("#menuDisplay", {
       xPercent: 100,
@@ -255,8 +258,7 @@ function openCloseMenuDisplay() {
     });
     gsap.to("#menuDisplay", {
       boxShadow: "50vw 0 10px 0px rgba(0, 0, 0, 0.5)",
-    })
-
+    });
   }
 }
 
@@ -275,7 +277,7 @@ window.addEventListener("scroll", () => {
     });
     gsap.to("#menuDisplay", {
       boxShadow: "50vw 0 10px 0px rgba(0, 0, 0, 0.5)",
-    })
+    });
   }
 });
 
@@ -302,7 +304,7 @@ gsap.to("#menu", {
 //Proyects
 function loadProyects(proyectsArray) {
   proyectGrid.innerHTML = "";
-  for (let i = 0; i <= proyectsArray.length-1; i++) {
+  for (let i = 0; i <= proyectsArray.length - 1; i++) {
     console.log(proyectsArray[i]);
     proyectGrid.innerHTML += `
     <a href="${proyectsArray[i].url}" target="_blank" data-tilt data-tilt-reverse="true" class="proyect proyect-${proyectsArray[i].type} magic-hover" >

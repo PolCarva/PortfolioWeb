@@ -33,6 +33,44 @@ body {
     font-weight: bold;
 }
 
+.update {
+    position: fixed;
+    bottom: 0.5rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 1000000;
+    background-color: rgb(243, 243, 129);
+    width: calc(100% - 1rem);
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    cursor: auto;
+    transition: all 0.3s ease;
+}
+
+.update a {
+    display: block;
+    width: 100%;
+    margin-top: 0.5rem;
+    text-align: center;
+}
+.update i {
+    height: fit-content;
+}
+
+.update a, .update i{
+    color: var(--color-black);
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.1s ease;
+}
+
+
+.update a:hover, .update i:hover {
+    color: var(--color-cyan);
+}
+
 .ligth {
     font-weight: 200;
 }
